@@ -1,14 +1,12 @@
+import { UserRoundCog } from "lucide-react";
 import { FaUserGear } from "react-icons/fa6";
 import { GoCrossReference } from "react-icons/go";
-import {
-  HiOutlineUserGroup,
-  HiOutlineHome,
-} from "react-icons/hi";
+import { HiOutlineUserGroup, HiOutlineHome } from "react-icons/hi";
 
 export const rolesData = [
   {
     title: "Admin Control",
-    icon: FaUserGear,
+    icon: UserRoundCog,
     points: [
       "Multi-society overview",
       "SLA & escalation rules",
@@ -45,5 +43,5 @@ export const rolesData = [
       "Live status tracking",
       "Faster resolutions",
     ],
-  }
+  },
 ];

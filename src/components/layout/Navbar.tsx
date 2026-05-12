@@ -1,6 +1,9 @@
-'use client';
+"use client";
 
+import Image from "next/image";
 import { useState } from "react";
+import { FaHandsHelping } from "react-icons/fa";
+import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 type Props = {
   onNavClick: (id: string) => void;
@@ -19,23 +22,30 @@ export default function Navbar({ onNavClick }: Props) {
     { label: "Features", id: "features" },
     { label: "How We Work", id: "how-we-work" },
     { label: "Solutions", id: "solutions" },
+    { label: "FAQ", id: "faq" },
     { label: "Contact Us", id: "contact" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <nav className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Top Bar */}
         <div className="flex h-16 items-center">
-
           {/* Logo */}
           <div
             className="flex items-center gap-2 font-bold text-xl text-primary cursor-pointer"
             onClick={() => handleNavClick("home")}
           >
-            <div className="w-9 h-9 rounded-full bg-linear-to-br from-orange-400 to-rose-400 shadow-sm cursor-pointer" />
-            <span>PropTech</span>
+            {/* <div className="w-9 h-9 rounded-full bg-linear-to-br from-orange-400 to-rose-400 shadow-sm cursor-pointer flex  justify-center items-center">
+              <FaHandsHelping className="text-white" />
+            </div>
+            <span>PropTech</span> */}
+            <Image
+              src="/images/logo.webp"
+              alt="PropTech Logo"
+              width={40}
+              height={32}
+            />
           </div>
 
           {/* Desktop Nav */}
@@ -62,21 +72,18 @@ export default function Navbar({ onNavClick }: Props) {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="ml-auto md:hidden"
-            onClick={() => setOpen(!open)}
-          >
-            <div className="space-y-1">
-              <span className="block h-0.5 w-6 bg-slate-800"></span>
-              <span className="block h-0.5 w-6 bg-slate-800"></span>
-              <span className="block h-0.5 w-6 bg-slate-800"></span>
-            </div>
+          <button className="ml-auto md:hidden" onClick={() => setOpen(!open)}>
+            {open ? (
+              <HiOutlineX className="w-7 h-7 text-slate-800" />
+            ) : (
+              <HiOutlineMenu className="w-7 h-7 text-slate-800" />
+            )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {open && (
-          <div className="md:hidden pb-6 pt-2 space-y-4 text-slate-700">
+          <div className="md:hidden z-50 pb-6 pt-5 space-y-4 text-slate-700">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -95,7 +102,6 @@ export default function Navbar({ onNavClick }: Props) {
             </button>
           </div>
         )}
-
       </div>
     </nav>
   );

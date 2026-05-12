@@ -8,8 +8,8 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute -top-32 -right-32 h-130 w-130 rounded-full bg-linear-to-br from-orange-400 via-orange-300 to-rose-300 opacity-20 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 -left-40 h-105 w-105 rounded-full bg-linear-to-tr from-orange-300 to-orange-200 opacity-20 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 pt-10 pb-5 md:py-16">
-        <div className="grid grid-cols-1 text-center md:text-left items-center gap-16 md:grid-cols-2">
+      <div className="relative mx-auto max-w-7xl px-6 pt-24 pb-5 md:py-24">
+        <div className="grid grid-cols-1 text-center md:text-left items-center gap-6 md:gap-16 md:grid-cols-2">
           {/* LEFT CONTENT */}
           <div className="animate-fade-up space-y-6">
             <h1 className="text-3xl font-extrabold leading-tight tracking-normal text-text-main md:text-3xl lg:text-4xl">

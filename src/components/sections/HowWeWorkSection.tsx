@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   HiOutlineClipboardList,
@@ -38,7 +38,6 @@ export default function HowWeWorkSection() {
   return (
     <section className="py-16 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-
         {/* Heading */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-up">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4">
@@ -51,23 +50,21 @@ export default function HowWeWorkSection() {
 
         {/* 2 Column Layout */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
-
           {/* LEFT IMAGE */}
           <div className="flex justify-center fade-in-left">
             <div className="relative">
-              <div className="absolute -inset-6 rounded-full bg-linear-to-br from-orange-200 to-rose-200 blur-2xl opacity-40"></div>
+              <div className="absolute -inset-6  rounded-full bg-linear-to-br from-orange-200 to-rose-200 blur-2xl opacity-40"></div>
 
               <img
                 src="/Process-amico.png"
                 alt="Workflow Dashboard"
-                className="relative rounded-2xl shadow-xl md:-rotate-3 w-[85%] max-w-sm md:max-w-md"
+                className="relative rounded-2xl shadow-xl left-7.5 md:-rotate-3 w-[85%] max-w-sm md:max-w-md"
               />
             </div>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="space-y-8 md:ml-16 fade-in-right">
-
+          <div className="space-y-8 md:ml-16 fade-in-right px-4 md:px-0">
             {steps.map((step, index) => {
               const Icon = step.icon;
 
@@ -75,9 +72,7 @@ export default function HowWeWorkSection() {
                 <div
                   key={step.step}
                   className={`flex items-start gap-4 sm:gap-6 ${
-                    index % 2 === 0
-                      ? "ml-0"
-                      : "md:ml-16"
+                    index % 2 === 0 ? "ml-0" : "md:ml-16"
                   }`}
                 >
                   {/* Big Step Number */}
@@ -94,14 +89,11 @@ export default function HowWeWorkSection() {
                       </h3>
                     </div>
 
-                    <p className="text-sm text-slate-600">
-                      {step.description}
-                    </p>
+                    <p className="text-sm text-slate-600">{step.description}</p>
                   </div>
                 </div>
               );
             })}
-
           </div>
         </div>
       </div>

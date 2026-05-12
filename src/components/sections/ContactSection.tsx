@@ -47,8 +47,8 @@ export default function ContactSection() {
 
   return (
     <>
-      <section className="relative bg-section">
-        <div className="relative mx-auto max-w-6xl px-6 py-18 z-30">
+      <section className="relative">
+        <div className="relative mx-auto max-w-6xl px-6 pb-10 md:py-18 z-30">
           <div className="grid grid-cols-1 items-center gap-6 md:gap-12 lg:grid-cols-2">
             {/* LEFT – SIMPLE IMAGE + TEXT */}
             <div>
@@ -70,7 +70,7 @@ export default function ContactSection() {
             </div>
 
             {/* RIGHT – FORM */}
-            <div className="rounded-2xl bg-white p-6 shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
+            <div className="rounded-2xl bg-white p-6 shadow-2xl">
               <h3 className="mb-5 text-2xl font-bold leading-tight tracking-normal text-center md:text-left text-text-main">
                 <span className="text-primary ">Contact</span> Us
               </h3>

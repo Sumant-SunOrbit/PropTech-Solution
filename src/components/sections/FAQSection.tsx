@@ -35,7 +35,7 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="py-16 bg-background">
+    <section className="pb-12 pt-4 md:py-16 bg-background">
       <div className="max-w-5xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-text-main">
           Frequently Asked <span className="text-primary">Questions</span>
@@ -47,8 +47,8 @@ export default function FAQSection() {
               key={i}
               className="group shadow-md rounded-2xl p-6 transition duration-300 open:shadow-lg"
             >
-              <summary className="flex justify-between items-center text-balance cursor-pointer list-none">
-                <span className="text-sm md:text-lg font-medium">
+              <summary className="flex justify-between items-center text-text-main text-balance cursor-pointer list-none">
+                <span className="text-sm md:text-lg  font-medium">
                   {faq.question}
                 </span>
 

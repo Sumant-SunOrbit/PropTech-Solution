@@ -1,8 +1,9 @@
 import React from "react";
 import { MapPin, Phone, Mail, Building2 } from "lucide-react";
-import { FaLinkedinIn, FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookF, FaHandsHelping } from "react-icons/fa";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const servicesList = [
@@ -42,8 +43,8 @@ const Footer = () => {
             {/* Brand */}
             <div>
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15">
-                  <Building2 className="text-primary" />
+                {/* <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15">
+                  <FaHandsHelping className="text-primary text-2xl" />
                 </div>
                 <div>
                   <h1 className="text-xl font-bold bg-linear-to-br from-orange-400 to-rose-400 shadow-sm text-transparent bg-clip-text">
@@ -52,7 +53,13 @@ const Footer = () => {
                   <p className="text-xs text-slate-400">
                     Smart Property Solutions
                   </p>
-                </div>
+                </div> */}
+                <Image
+                  src="/images/logo.webp"
+                  alt="PropTech Logo"
+                  width={55}
+                  height={40}
+                />
               </div>
 
               <p className="mb-4 text-slate-400">
