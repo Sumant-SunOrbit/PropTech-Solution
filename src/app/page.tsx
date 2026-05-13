@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-
 import HomeSection from "@/components/sections/HomeSection";
 import FeaturesSection from "@/components/sections/FeaturesSection";
 import HowWeWorkSection from "@/components/sections/HowWeWorkSection";
 import SolutionsSection from "@/components/sections/SolutionsSection";
 import ContactSection from "@/components/sections/ContactSection";
+import LogoCarousel from "@/components/ui/LogoCarousel";
+import FAQSection from "@/components/sections/FAQSection";
 
 export default function HomePage() {
   const scrollToSection = (id: string) => {
@@ -25,6 +26,10 @@ export default function HomePage() {
           <HomeSection />
         </section>
 
+        <section>
+          <LogoCarousel />
+        </section>
+
         <section id="features">
           <FeaturesSection />
         </section>
@@ -35,6 +40,10 @@ export default function HomePage() {
 
         <section id="solutions">
           <SolutionsSection />
+        </section>
+
+        <section id="faq">
+          <FAQSection />
         </section>
 
         <section id="contact">

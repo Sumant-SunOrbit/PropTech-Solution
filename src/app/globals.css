@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
+
 /* ------------------------------
    Brand Tokens (CSS Variables)
 --------------------------------*/
 :root {
-  --primary: 249 115 22;        /* orange-500 */
-  --primary-light: 253 186 116; /* orange-300 */
+  --primary: 249 115 22;
+  /* orange-500 */
+  --primary-light: 253 186 116;
+  /* orange-300 */
 
-  --text-main: 15 23 42;        /* slate-900 */
-  --text-sub: 100 116 139;    /* slate-500 */
+  --text-main: 15 23 42;
+  /* slate-900 */
+  --text-sub: 100 116 139;
+  /* slate-500 */
 
   --bg-main: 255 255 255;
-  --bg-section: 255 247 237;    /* orange-50 */
+  --bg-section: 255 247 237;
+  /* orange-50 */
 }
 
 /* ------------------------------
@@ -30,11 +36,112 @@
 /* ------------------------------
    Base Styles
 --------------------------------*/
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: rgb(var(--bg-main));
+  background-color: rgb(var(--bg-main)) !important;
   color: rgb(var(--text-main));
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-fade-down {
+  animation: fade-down 0.7s ease-out both;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeInLeft 0.6s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-34px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.3s;
+}
+
+/* scroll */
+@keyframes scroll {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeInRight 0.6s ease forwards;
 }
